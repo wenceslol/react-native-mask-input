@@ -7,16 +7,8 @@ export default function createNumberMask(props?: CreateNumberMaskProps): Mask {
   const { delimiter = '.', precision = 0, prefix = [], suffix = [], separator = ',' } = props || {};
 
   return (value?: string) => {
-
-    let numericValue = value?.replace(/\D+/g, '') || '';
-    const newValue = value?.replace(/\D+/g, '') || '';
-    
-    const testeValue = value?.replace(/[^0-9]/g, '');
-    if (testeValue?.length === 1){
-      numericValue = newValue.slice(0, -1);
-    }
-    
-
+    const numericValue = value?.replace(/\D+/g, '') || '';
+   
     let mask: MaskArray = numericValue.split('').map(() => /\d/);
 
     const shouldAddSeparatorOnMask = precision > 0 && !!separator;
