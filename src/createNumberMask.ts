@@ -13,7 +13,7 @@ export default function createNumberMask(props?: CreateNumberMaskProps): Mask {
     
     const testeValue = value?.replace(/[^0-9]/g, '');
     if (testeValue?.length === 1){
-      let numericValue = newValue.slice(0, -1);
+      numericValue = newValue.slice(0, -1);
     }
     
 
