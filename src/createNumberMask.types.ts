@@ -9,4 +9,6 @@ export type CreateNumberMaskProps = {
   separator?: string;
   /** Mask to be prefixed on the mask result */
   prefix?: MaskArray;
+  /** Máscara de sufixo */
+  suffix?: MaskArray;
 };
